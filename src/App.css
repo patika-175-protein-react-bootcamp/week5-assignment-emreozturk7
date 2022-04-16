@@ -1,0 +1,258 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Patika */
+
+.patika-container {
+    position: absolute;
+    width: 889px;
+    height: 980px;
+    left: 0px;
+    top: 0px;
+
+    background: #DADADA;
+}
+
+.padding-container {
+    padding: 5%;
+}
+
+.patika-title {
+    position: absolute;
+    width: 559px;
+    height: 74px;
+    left: 56px;
+    top: calc(50% - 74px/2 - 200.5px);
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 59px;
+    line-height: 74px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+
+    color: #444AFF;
+}
+
+.content-container {
+    width: 797px;
+    height: 245px;
+}
+
+.content {
+    position: absolute;
+    width: 797px;
+    height: 245px;
+    left: 56px;
+    top: calc(50% - 245px/2 - 12px);
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+
+    color: #444AFF;
+}
+
+.shape-container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-top: 30%;
+}
+
+.patika-shape-large {
+    padding-right: 7.5%;
+}
+
+/* Register Form*/
+
+.form-container {
+    position: absolute;
+    width: 560px;
+    height: 868px;
+    left: 1139px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mode-container {
+    position: absolute;
+    left: 125%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.register-title {
+    width: 114px;
+    height: 59px;
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 59px;
+    color: #3C3C3C;
+}
+
+.name-surname-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 183px;
+    padding-top: 50px;
+}
+
+.name-container input {
+    border: 2px solid #8E8E8E;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    position: absolute;
+    width: 264px;
+    padding-left: 10px;
+
+    height: 56px;
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    color: #8E8E8E;
+}
+
+.surname-container input {
+    border: 2px solid #8E8E8E;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    position: absolute;
+    width: 264px;
+    padding-left: 10px;
+    height: 56px;
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    color: #8E8E8E;
+}
+
+.label-text {
+    padding-bottom: 15px;
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.15px;
+
+    color: #3C3C3C;
+}
+
+input {
+    border: 2px solid #8E8E8E;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    position: absolute;
+    width: 560px;
+    padding-left: 10px;
+
+    height: 56px;
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    color: #8E8E8E;
+}
+
+.form-group {
+    padding-top: 75px;
+}
+
+.sozlesme {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.checkbox {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+
+    border: 2px solid #8E8E8E;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+.sozlesme-kabul {
+    position: absolute;
+    width: 185px;
+    height: 18px;
+    margin-top: 102.5px;
+    margin-left: 30px;
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+
+    color: #8E8E8E;
+}
+
+.register-button {
+    position: absolute;
+    height: 56px;
+    left: 0%;
+    right: 0%;
+    top: 775px;
+
+    background: #444AFF;
+    border-radius: 4px;
+}
+
+.register {
+    position: absolute;
+    width: 100px;
+    height: 18px;
+    margin-top: 30%;
+    margin-left: 40%;
+
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1.25px;
+
+    color: #F0F0F0;
+}
