@@ -19,8 +19,6 @@
     height: 980px;
     left: 0px;
     top: 0px;
-
-    background: #DADADA;
 }
 
 .padding-container {
@@ -41,8 +39,6 @@
     line-height: 74px;
     letter-spacing: -0.5px;
     text-transform: uppercase;
-
-    color: #444AFF;
 }
 
 .content-container {
@@ -62,8 +58,6 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 35px;
-
-    color: #444AFF;
 }
 
 .shape-container {
@@ -106,7 +100,6 @@
     font-weight: 700;
     font-size: 47px;
     line-height: 59px;
-    color: #3C3C3C;
 }
 
 .name-surname-container {
@@ -134,7 +127,6 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.15px;
-    color: #8E8E8E;
 }
 
 .surname-container input {
@@ -153,11 +145,10 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.15px;
-    color: #8E8E8E;
 }
 
 .label-text {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 
     font-family: 'Oxygen';
     font-style: normal;
@@ -165,8 +156,6 @@
     font-size: 20px;
     line-height: 25px;
     letter-spacing: 0.15px;
-
-    color: #3C3C3C;
 }
 
 input {
@@ -186,11 +175,10 @@ input {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.15px;
-    color: #8E8E8E;
 }
 
 .form-group {
-    padding-top: 75px;
+    padding-top: 85px;
 }
 
 .sozlesme {
@@ -234,17 +222,7 @@ input {
     left: 0%;
     right: 0%;
     top: 775px;
-
-    background: #444AFF;
     border-radius: 4px;
-}
-
-.register {
-    position: absolute;
-    width: 100px;
-    height: 18px;
-    margin-top: 30%;
-    margin-left: 40%;
 
     font-family: 'Oxygen';
     font-style: normal;
@@ -255,4 +233,16 @@ input {
     letter-spacing: 1.25px;
 
     color: #F0F0F0;
+}
+
+.error-message {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    position: absolute;
+    color: #EE6356;
+    margin-top: 10%;
 }

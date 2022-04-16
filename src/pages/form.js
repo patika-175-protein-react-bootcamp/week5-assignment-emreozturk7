@@ -1,92 +1,93 @@
 import React from 'react';
 import { Formik } from 'formik';
-import * as yup from 'yup';
 import DividerIcon from '../constants/icons/dividerIcon';
 import NightIcon from '../constants/icons/nightIcon';
-
-
+import SunIcon from '../constants/icons/sunIcon';
+import { RegisterScheme } from '../constants/schema/yupSchema';
+import { useTheme } from '../context/theme';
 
 function Register() {
-    const LoginScheme = yup.object().shape({
-        name: yup
-            .string()
-            .required("İsim kismi boş olamaz"),
-        surname: yup
-            .string()
-            .required("Soyisim kismi boş olamaz"),
-        nickname: yup
-            .string()
-            .required("Nickname kismi boş olamaz"),
-        email: yup
-            .string()
-            .email('Lütfen geçerli bir email adresi giriniz !')
-            .required('E-posta alani zorunludur.'),
-        password: yup
-            .string()
-            .typeError('Her karakteri kullanamazsiniz')
-            .min(8, 'Şifreniz 8 karakterden az olamaz')
-            .max(32, 'Şifreniz 32 karakterden fazla olamaz')
-            .required('Şifre alani zorunludur')
-    });
+    const { theme, changeTheme } = useTheme();
 
     return (
         <>
             <div className='form-container'>
 
-                <form className='register-form'>
+                <div onClick={() => changeTheme()} className='mode-container'>
+                    {
+                        theme ? <SunIcon /> : <NightIcon />
+                    }
+                </div>
 
-                    <div className='mode-container'>
-                        <NightIcon />
-                    </div>
+                <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='register-title'>Kayıt</div>
+                <DividerIcon color={theme ? "#FFBF5E" : "#444AFF"} />
 
-                    <div className='register-title'>Kayıt</div>
-                    <DividerIcon />
+                <Formik initialValues={{
+                    name: '',
+                    surname: '',
+                    email: '',
+                    nickname: '',
+                    password: '',
+                    passwordConfirm: '',
+                }}
+                    onSubmit={(auth) => {
+                        console.log(auth);
+                    }}
+                    validationSchema={RegisterScheme}
+                >
+                    {
+                        ({ values, handleChange, handleSubmit, errors }) =>
+                            <form className='register-form'>
 
-                    <div className='name-surname-container'>
-                        <div className='name-container'>
-                            <div className='label-text'><label htmlFor="name">İSİM</label></div>
-                            <input type="text" required id="name" placeholder='İsmini Gir' />
-                        </div>
-                        <div className='surname-container'>
-                            <div className='label-text'><label htmlFor="name">SOYİSİM</label></div>
+                                <div className='name-surname-container' onSubmit={handleSubmit}>
 
-                            <input type="text" required id="surname" placeholder='Soyismini Gir' />
-                        </div>
-                    </div>
+                                    <div className='name-container'>
+                                        <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">İSİM</label></div>
+                                        <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="name" placeholder='İsmini Gir' value={values.name} onChange={handleChange} />
+                                        <span className='error-message'>{errors.name}</span>
+                                    </div>
 
-                    <div className='form-group'>
-                        <div className='label-text'><label htmlFor="name">E-POSTA</label></div>
+                                    <div className='surname-container'>
+                                        <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">SOYİSİM</label></div>
+                                        <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="surname" placeholder='Soyismini Gir' value={values.surname} onChange={handleChange} />
+                                        <span className='error-message'>{errors.surname}</span>
+                                    </div>
+                                </div>
 
-                        <input type="text" required id="email" placeholder='E-posta adresini gir' />
-                    </div>
+                                <div className='form-group'>
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">E-POSTA</label></div>
+                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="email" placeholder='E-posta adresini gir' value={values.email} onChange={handleChange} />
+                                    <span className='error-message'>{errors.email}</span>
+                                </div>
 
-                    <div className='form-group'>
-                        <div className='label-text'><label htmlFor="name">KULLANICI ADI</label></div>
+                                <div className='form-group'>
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">KULLANICI ADI</label></div>
+                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="nickname" placeholder='Kullanıcı adını gir' value={values.nickname} onChange={handleChange} />
+                                    <span className='error-message'>{errors.nickname}</span>
+                                </div>
 
-                        <input type="text" required id="nickname" placeholder='Kullanıcı adını gir' />
-                    </div>
+                                <div className='form-group'>
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">ŞİFRE</label></div>
+                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="password" placeholder='Şifreni gir' value={values.password} onChange={handleChange} />
+                                    <span className='error-message'>{errors.password}</span>
+                                </div>
 
-                    <div className='form-group'>
-                        <div className='label-text'><label htmlFor="name">ŞİFRE</label></div>
+                                <div className='form-group'>
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">ŞİFRENİ DOĞRULA</label></div>
+                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="passwordConfirm" placeholder='Şifreni tekrar gir' value={values.passwordConfirm} onChange={handleChange} />
+                                    <span className='error-message'>{errors.passwordConfirm}</span>
+                                </div>
 
-                        <input type="text" required id="password" placeholder='Şifreni gir' />
-                    </div>
+                                <div className='sozlesme'>
+                                    <input type="checkbox" className='checkbox' />
+                                    <div className='sozlesme-kabul'>Sözleşmeyi kabul ediyorum</div>
+                                </div>
 
-                    <div className='form-group'>
-                        <div className='label-text'><label htmlFor="name">ŞİFRENİ DOĞRULA</label></div>
-
-                        <input type="text" required id="password-retry" placeholder='Şifreni tekrar gir' />
-                    </div>
-
-                    <div className='sozlesme'>
-                        <input type="checkbox" className='checkbox' />
-                        <div className='sozlesme-kabul'>Sözleşmeyi kabul ediyorum</div>
-                    </div>
-
-                    <div className='register-button'></div>
-                    <div className='register'>KAYIT OL</div>
-                </form>
-
+                                <button className='register-button' style={theme ? { background: '#FFBF5E' } : { background: '#444AFF' }} type='submit' onClick={handleSubmit}>KAYIT OL</button>
+                                <div className='register'>KAYIT OL</div>
+                            </form>
+                    }
+                </Formik>
             </div>
         </>
     );
