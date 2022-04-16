@@ -1,4 +1,4 @@
-# Maths-Challenge
+# Register-App
 
 ## [Projenin canlı hali](https://register-three.vercel.app/)
 
