@@ -158,6 +158,10 @@
     letter-spacing: 0.15px;
 }
 
+.label-text-after {
+    color: #EE6356;
+}
+
 input {
     border: 2px solid #8E8E8E;
     box-sizing: border-box;

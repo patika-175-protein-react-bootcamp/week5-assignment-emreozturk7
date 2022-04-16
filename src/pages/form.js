@@ -42,39 +42,39 @@ function Register() {
                                 <div className='name-surname-container' onSubmit={handleSubmit}>
 
                                     <div className='name-container'>
-                                        <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">İSİM</label></div>
-                                        <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="name" placeholder='İsmini Gir' value={values.name} onChange={handleChange} />
+                                        <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">İSİM {<span className='label-text-after'>*</span>}</label></div>
+                                        <input style={theme ? { background: "#2C2C2C", color: "#FEFEFE" } : { background: "#FEFEFE", color: "#2C2C2C" }} type="text" required id="name" placeholder='İsmini Gir' value={values.name} onChange={handleChange} />
                                         <span className='error-message'>{errors.name}</span>
                                     </div>
 
                                     <div className='surname-container'>
-                                        <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">SOYİSİM</label></div>
-                                        <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="surname" placeholder='Soyismini Gir' value={values.surname} onChange={handleChange} />
+                                        <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">SOYİSİM {<span className='label-text-after'>*</span>}</label></div>
+                                        <input style={theme ? { background: "#2C2C2C", color: "#FEFEFE" } : { background: "#FEFEFE", color: "#2C2C2C" }} type="text" required id="surname" placeholder='Soyismini Gir' value={values.surname} onChange={handleChange} />
                                         <span className='error-message'>{errors.surname}</span>
                                     </div>
                                 </div>
 
                                 <div className='form-group'>
-                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">E-POSTA</label></div>
-                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="email" placeholder='E-posta adresini gir' value={values.email} onChange={handleChange} />
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">E-POSTA {<span className='label-text-after'>*</span>}</label></div>
+                                    <input style={theme ? { background: "#2C2C2C", color: "#FEFEFE" } : { background: "#FEFEFE", color: "#2C2C2C" }} type="text" required id="email" placeholder='E-posta adresini gir' value={values.email} onChange={handleChange} />
                                     <span className='error-message'>{errors.email}</span>
                                 </div>
 
                                 <div className='form-group'>
-                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">KULLANICI ADI</label></div>
-                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="nickname" placeholder='Kullanıcı adını gir' value={values.nickname} onChange={handleChange} />
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">KULLANICI ADI {<span className='label-text-after'>*</span>}</label></div>
+                                    <input style={theme ? { background: "#2C2C2C", color: "#FEFEFE" } : { background: "#FEFEFE", color: "#2C2C2C" }} type="text" required id="nickname" placeholder='Kullanıcı adını gir' value={values.nickname} onChange={handleChange} />
                                     <span className='error-message'>{errors.nickname}</span>
                                 </div>
 
                                 <div className='form-group'>
-                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">ŞİFRE</label></div>
-                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="password" placeholder='Şifreni gir' value={values.password} onChange={handleChange} />
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">ŞİFRE {<span className='label-text-after'>*</span>}</label></div>
+                                    <input style={theme ? { background: "#2C2C2C", color: "#FEFEFE" } : { background: "#FEFEFE", color: "#2C2C2C" }} type="text" required id="password" placeholder='Şifreni gir' value={values.password} onChange={handleChange} />
                                     <span className='error-message'>{errors.password}</span>
                                 </div>
 
                                 <div className='form-group'>
-                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">ŞİFRENİ DOĞRULA</label></div>
-                                    <input style={theme ? { background: "#2C2C2C" } : { background: "#FEFEFE" }} type="text" required id="passwordConfirm" placeholder='Şifreni tekrar gir' value={values.passwordConfirm} onChange={handleChange} />
+                                    <div style={theme ? { color: "#FEFEFE" } : { color: "#3C3C3C" }} className='label-text'><label htmlFor="name">ŞİFRENİ DOĞRULA {<span className='label-text-after'>*</span>}</label></div>
+                                    <input style={theme ? { background: "#2C2C2C", color: "#FEFEFE" } : { background: "#FEFEFE", color: "#2C2C2C" }} type="text" required id="passwordConfirm" placeholder='Şifreni tekrar gir' value={values.passwordConfirm} onChange={handleChange} />
                                     <span className='error-message'>{errors.passwordConfirm}</span>
                                 </div>
 
